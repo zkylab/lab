@@ -1,22 +1,90 @@
 <html>
    <head>
    
+			<style>
+				body {background-color:#DE1515;}
+				h1 {
+				font:normal 60pt Arial;
+ color:#FFFFFF;
+ text-shadow: 0 1px 0 #ccc,
+ 0 2px 0 #c9c9c9,
+ 0 3px 0 #bbb,
+ 0 4px 0 #b9b9b9,
+ 0 5px 0 #aaa,
+ 0 6px 1px rgba(0,0,0,.1),
+ 0 0 5px rgba(0,0,0,.1),
+ 0 1px 3px rgba(0,0,0,.3),
+ 0 3px 5px rgba(0,0,0,.2),
+ 0 5px 10px rgba(0,0,0,.25),
+ 0 10px 10px rgba(0,0,0,.2),
+ 0 20px 20px rgba(0,0,0,.15);
+					}
+					
+					.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type="text"] {
+padding: 10px;
+  border: solid 5px #c9c9c9;
+  box-shadow: inset 0 0 0 1px #707070;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+h2{
+
+color: #fff;
+font-size: 40px;
+font-weight: bold;
+font-family: Helvetica;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);}
+				p    {
+				
+				color : #E5C4CE;
+				 font:normal 20pt Arial;
+				text-shadow: 0 5px 0 #ccc,
+
+				}
+				
+			</style>
+			
       <script type="text/javascript">
          <!--
-            function Warn() {
-               alert ("This is a warning message!");
-               document.write ("This is a warning message!");
+            function myFunction() {
+               
+			   var x = parseInt(document.getElementById("vize_grade").value);
+			   var y = parseInt(document.getElementById("final_grade").value);
+			   var z = x*0.4 + y*0.6;
+			   
+			   
+               document.getElementById("demo").innerHTML = "Total  : " + z;
             }
          //-->
       </script>
       
    </head>
    <body>
-      <p>Click the following button to see the result: </p>
-      
-      <form>
-         <input type="button" value="Click Me" onclick="Warn();" />
-      </form>
-      
+   
+    <center> <h1>Not Hesaplamatik v1.0</h1>
+	  <br/>
+			<br/>
+     
+			<p>Vize Notu  : <input type="text" id="vize_grade" value=" " ><br>
+			
+			
+			<br/></p>
+			<p> Final Notu : <input type="text" id="final_grade" value=" "><br></p>
+			
+					    <input class ="button" type="submit" value="Hesapla" onclick="myFunction()">
+			<p id="demo" onclick="myFunction()">Total  : </p>
+			<h2>coded by zkylab</h2>
+			</center>
    </body>
 </html>
